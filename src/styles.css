@@ -1,0 +1,80 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  bottom: 30px;
+}
+
+.toast-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.toast-wrapper div {
+  position: relative;
+  width: 98vw;
+  margin: 5px 1vw;
+  top: 0;
+  overflow: auto;
+  box-shadow: 1px 1px 5px 0px #2224;
+  background-color: white;
+  z-index: 999;
+  transition: all 0.3s;
+  animation-name: slide-down, dimmed;
+  transition: all 0.3s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-down {
+  0% {
+    top: -200px;
+    min-height: 0;
+    padding: 0;
+    height: 0;
+  }
+  20% {
+    top: 0px;
+    height: auto;
+    min-height: 60px;
+    padding: 5px;
+  }
+  50% {
+    min-height: 60px;
+    padding: 5px;
+    top: 0px;
+  }
+  75% {
+    min-height: 60px;
+    padding: 5px;
+    top: 0px;
+  }
+  100% {
+    margin: 5px 1vw;
+    min-height: 60px;
+    padding: 5px;
+    top: 0px;
+  }
+}
+
+@keyframes dimmed {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
