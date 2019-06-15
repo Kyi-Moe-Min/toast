@@ -12,7 +12,7 @@ export default class Apps extends React.Component {
       let { toasts = [] } = preState;
       const id = toastCount++;
       toasts.unshift({ id, msg, ok });
-      this.clearTost();
+      this.clearToast();
       return { toasts };
     });
   };
